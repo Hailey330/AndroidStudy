@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <include layout="@layout/layout_profile1" />
+        <include layout="@layout/layout_profile2" />
+        <include layout="@layout/layout_profile3" />
+        <include layout="@layout/layout_profile4" />
+        <include layout="@layout/layout_profile5" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <!--인스타그램 본문-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_top"/>
+            <include layout="@layout/layout_content1"/>
+            <include layout="@layout/layout_remote"/>
+            <include layout="@layout/layout_like"/>
+            <include layout="@layout/layout_write"/>
+            <include layout="@layout/layout_comment"/>
+            <include layout="@layout/layout_time"/>
+
+            <include layout="@layout/layout_top"/>
+            <include layout="@layout/layout_content2"/>
+            <include layout="@layout/layout_remote"/>
+            <include layout="@layout/layout_like"/>
+            <include layout="@layout/layout_write"/>
+            <include layout="@layout/layout_comment"/>
+            <include layout="@layout/layout_time"/>
+
+            <include layout="@layout/layout_top"/>
+            <include layout="@layout/layout_content3"/>
+            <include layout="@layout/layout_remote"/>
+            <include layout="@layout/layout_like"/>
+            <include layout="@layout/layout_write"/>
+            <include layout="@layout/layout_comment"/>
+            <include layout="@layout/layout_time"/>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>
