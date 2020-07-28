@@ -1,11 +1,13 @@
 package com.cos.listviewex02;
 
+import android.media.Image;
 import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -15,10 +17,10 @@ import java.util.List;
 public class SingleAdapter extends BaseAdapter {
 
     private static final String TAG = "SingleAdapter";
-    private List<String> items = new ArrayList<>();
+    private List<Movie> items = new ArrayList<>();
 
     // 어댑터는 데이터를 알고 있어야함 → 리스트를 구축하기 위해서
-    public void addItems(List<String> items) {
+    public void addItems(List<Movie> items) {
         this.items = items; // 데이터를 한 번에 담음
     }
 
@@ -44,8 +46,13 @@ public class SingleAdapter extends BaseAdapter {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext()); // inflater 객체 얻음 : inflater로 View를 메모리에 띄우기 위해서
         View itemView = inflater.inflate(R.layout.item, parent, false); // view 객체 얻음
         // 최초 OnCreate 될 때 6개의 view 뜨고, 6번 리스트 지나서 7번부터 getItem 호출됨!
+        // View 찾기
         TextView tv = itemView.findViewById(R.id.tv_title);
-        tv.setText(getItem(position).toString());
+        ImageView iv = itemView.findViewById(R.id.iv_img_resource);
+        String title = ((Movie) getItem(position)).getTitle();
+        int imgResource = ((Movie) getItem(position)).getImageResource();
+        tv.setText(title);
+        iv.setImageResource(imgResource);
         return itemView;
     }
 }
