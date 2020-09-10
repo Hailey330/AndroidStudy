@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    위치 값, 마진 공통적으로 쓰는 거 여기에 적어두고 끌어쓰기-->
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
